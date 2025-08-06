@@ -65,10 +65,10 @@ names(expression_value) = gene_names
 expression_value
 
 #Create a vector of the gene lengths 100, 3000, 200, 1000
-#Assign the gene names as header for the expression vector
+#Assign the gene names as header for the gene lengths vector
 gene_lengths = c(100, 3000, 200, 1000)
 gene_lengths
-names(gene_lengths, expression_value) = gene_names
+names(gene_lengths) = gene_names
 gene_lengths
 
 #Find the longest gene
@@ -79,4 +79,4 @@ selected_genes= gene_lengths > 100 & expression_value > 10000
 names(gene_lengths[selected_genes])
 
 
-getwd()
+
