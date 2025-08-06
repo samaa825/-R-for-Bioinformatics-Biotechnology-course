@@ -79,5 +79,4 @@ selected_genes= gene_lengths > 100 & expression_value > 10000
 names(gene_lengths[selected_genes])
 
 
-
-
+getwd()
