@@ -1,0 +1,83 @@
+#Create folders
+dir.create("Data")
+dir.create("script")
+dir.create("results") 
+
+#Create a vector containing the values 1,2,3,4,5
+my_vector <- c(1, 2, 3, 4, 5)
+my_vector
+
+#Create a vector containing the values 1 to 100
+numbers <- 1:100
+numbers
+
+#Create a vector containing the values 0,5,10,15,20
+my_sequence <- seq(from = 0, to = 20, by = 5)
+my_sequence
+
+#Create a vector containing the values 1,1,2,2,3,3
+vector <- c(rep(1:3, each = 2))
+vector
+
+#Create a vector containing the values 1,1,5,7,9,10
+vector1 = c(rep(1, each = 2), 5, 7, 9, 10)
+vector1
+
+#Create a vector containing the values 1 to 10.
+vector2 = c(1:10)
+vector2
+
+#Create a new vector with all but the fi rst and last value.
+new_vector = vector2[c(2: length(vector2) -1)]
+new_vector
+
+#Create a new vector with all but the second and fi fth value.
+newvector = vector2[-c(2, 5)]
+newvector
+
+#Create a new vector of square root of the sixth and seventh position.
+values = vector2[c(6,7)]
+values
+sqrt_values = sqrt(values)
+sqrt_values
+
+##Create a new vector of alternating positions in the vector using another vector.
+mr_vector = vector2[seq(2, length(vector2), by = 2)]
+mr_vector
+
+##Find the number of fi les in the present working directory.
+files = list.files()
+ length(files)
+
+
+##List the fi rst fi le in the present working directory.
+files [1]
+
+#Create a vector of the gene names Gene_1, Gene_2, Gene_3 Gene_4
+gene_names = paste0("Gene_", 1:4)
+gene_names
+
+#Create a vector of the expression values 1000, 3000, 10000, 12000
+#Assign the gene names as header for the expression vector
+expression_value = c(1000, 3000, 10000, 12000)
+expression_value
+names(expression_value) = gene_names
+expression_value
+
+#Create a vector of the gene lengths 100, 3000, 200, 1000
+#Assign the gene names as header for the expression vector
+gene_lengths = c(100, 3000, 200, 1000)
+gene_lengths
+names(gene_lengths, expression_value) = gene_names
+gene_lengths
+
+#Find the longest gene
+names(gene_lengths[which.max(gene_lengths)])
+
+#Identify genes which have a length greater than 100 and expression greater than 10000
+selected_genes= gene_lengths > 100 & expression_value > 10000
+names(gene_lengths[selected_genes])
+
+
+
+
